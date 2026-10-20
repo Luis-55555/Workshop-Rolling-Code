@@ -4,9 +4,10 @@ import {
   Facebook,
   Linkedin,
   Youtube,
-  X,
   Github,
-} from "lucide-react";
+} from "lucide-brands";
+
+import { X } from "lucide-react";
 
 
 const socialLinks = [
@@ -23,12 +24,12 @@ export default function Footer() {
     <footer className="rc-footer">
       <div className="rc-footer__inner rc-container">
         <a
-          href="/"
+          href=""
           className="rc-footer__logo"
           aria-label="Rolling Code, inicio"
         >
           <img
-            src="/images/rolling-code-logo.svg"
+            src="src/assets/Logo/rclogo-dark-bad41e62.png"
             alt="Rolling Code School"
           />
         </a>
