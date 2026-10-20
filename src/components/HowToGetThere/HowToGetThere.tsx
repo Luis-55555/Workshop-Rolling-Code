@@ -1,10 +1,10 @@
-import "./Comollegar.css";
+import "./HowToGetThere.css";
 const direccion = "Calle Gral. Paz 576, Entrepiso, 4000 San Miguel de Tucumán, Tucumán";
 
 const bingMapsUrl =
   "https://www.bing.com/maps?cp=-26.8366~-65.2072&lvl=17";
 
- function ComoLlegar() {
+ function HowToGetThere () {
   return (
     <section className="como-llegar" id="como-llegar">
       <div className="como-llegar__contenido">
@@ -80,4 +80,4 @@ const bingMapsUrl =
   );
 }
 
-export default ComoLlegar;
+export default HowToGetThere ;
