@@ -1,0 +1,335 @@
+.como-llegar {
+  width: 100%;
+  padding-block: var(--rc-section-gap, 96px);
+  overflow: hidden;
+  background: var(--rc-black, #0b0b0c);
+  color: var(--rc-white, #fff);
+  font-family: var(--rc-font, system-ui, sans-serif);
+}
+
+.como-llegar *,
+.como-llegar *::before,
+.como-llegar *::after {
+  box-sizing: border-box;
+}
+
+.como-llegar__contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: var(--rc-card-gap, 24px);
+  width: min(100%, var(--rc-container, 1200px));
+  margin-inline: auto;
+  padding-inline: var(--rc-gutter, 24px);
+}
+
+.como-llegar__informacion {
+  min-width: 0;
+}
+
+.como-llegar__etiqueta {
+  margin: 0 0 16px;
+  color: var(--rc-red, #e0202a);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.como-llegar h2 {
+  max-width: 600px;
+  margin: 0 0 24px;
+  color: var(--rc-white, #fff);
+  font-size: clamp(36px, 4.7vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  overflow-wrap: anywhere;
+}
+
+.como-llegar__direccion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--rc-text-soft, #d4d4d8);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.como-llegar__direccion p {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.como-llegar__icono {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--rc-red, #e0202a);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.como-llegar__datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.como-llegar__datos li {
+  padding: 8px 16px;
+  border: 1px solid var(--rc-border, #2c2c31);
+  border-radius: var(--rc-radius-pill, 999px);
+  background: var(--rc-surface, #111113);
+  color: var(--rc-text-soft, #d4d4d8);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.como-llegar__botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.como-llegar .boton {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: var(--rc-radius-pill, 999px);
+  color: var(--rc-white, #fff);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.como-llegar .boton:hover {
+  transform: translateY(-2px);
+}
+
+.como-llegar .boton:focus-visible,
+.como-llegar .mapa:focus-visible {
+  outline: 3px solid var(--rc-white, #fff);
+  outline-offset: 4px;
+}
+
+.como-llegar .boton--principal {
+  background: var(--rc-red, #e0202a);
+}
+
+.como-llegar .boton--principal:hover {
+  background: var(--rc-red-dark, #a50d14);
+}
+
+.como-llegar .boton--secundario {
+  border-color: var(--rc-red, #e0202a);
+  background: transparent;
+}
+
+.como-llegar .boton--secundario:hover {
+  background: var(--rc-surface-2, #26262a);
+}
+.como-llegar .mapa {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 300px;
+  aspect-ratio: 1.5 / 1;
+  overflow: hidden;
+  border: 1px solid var(--rc-border, #2c2c31);
+  border-radius: var(--rc-radius-card, 32px);
+  background-color: var(--rc-surface-2, #26262a);
+  background-image:
+    linear-gradient(#ffffff12 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff12 1px, transparent 1px);
+  background-size: 48px 48px;
+  text-decoration: none;
+}
+
+.mapa__calles {
+  position: absolute;
+  inset: 0;
+}
+
+.mapa__calle {
+  position: absolute;
+  display: block;
+  background: #3a3a40;
+}
+
+.mapa__calle--vertical {
+  top: 0;
+  bottom: 0;
+  left: 57%;
+  width: clamp(24px, 4vw, 36px);
+}
+
+.mapa__calle--horizontal {
+  top: 48%;
+  right: 0;
+  left: 0;
+  height: clamp(24px, 4vw, 34px);
+}
+
+.mapa__marcador {
+  position: absolute;
+  top: 40%;
+  left: 57%;
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 12px solid rgb(224 32 42 / 25%);
+  border-radius: 50%;
+  background: var(--rc-red, #e0202a);
+}
+
+.mapa__marcador svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--rc-white, #fff);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.mapa__tarjeta {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--rc-border, #2c2c31);
+  border-radius: var(--rc-radius-option, 18px);
+  background: rgb(17 17 19 / 94%);
+  color: var(--rc-white, #fff);
+}
+
+.mapa__lugar {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.mapa__lugar strong {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.mapa__lugar span,
+.mapa__coordenadas {
+  color: var(--rc-text-mute, #a1a1aa);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.mapa__coordenadas {
+  color: var(--rc-text-soft, #d4d4d8);
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .como-llegar__contenido {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .como-llegar h2 {
+    font-size: clamp(36px, 5vw, 48px);
+  }
+
+  .como-llegar .mapa {
+    min-height: 280px;
+  }
+}
+@media (max-width: 700px) {
+  .como-llegar {
+    padding-block: 56px;
+  }
+
+  .como-llegar__contenido {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .como-llegar h2 {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .como-llegar__botones {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .como-llegar .boton {
+    width: 100%;
+  }
+
+  .como-llegar .mapa {
+    min-height: 270px;
+    aspect-ratio: 1.2 / 1;
+    border-radius: var(--rc-radius-box, 28px);
+  }
+
+  .mapa__tarjeta {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    padding: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .como-llegar__contenido {
+    padding-inline: 16px;
+  }
+
+  .como-llegar h2 {
+    font-size: 32px;
+  }
+
+  .como-llegar__datos {
+    gap: 8px;
+  }
+
+  .como-llegar__datos li {
+    padding: 7px 11px;
+    font-size: 13px;
+  }
+
+  .mapa__coordenadas {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .como-llegar .boton {
+    transition: none;
+  }
+
+  .como-llegar .boton:hover {
+    transform: none;
+  }
+}
