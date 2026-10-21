@@ -90,7 +90,7 @@ export default function Ticket() {
   ];
 
   return (
-    <section className="rc-entrada" id="entradas">
+    <section className="rc-entrada" id="tickets">
       <div className="rc-container">
         <span className="rc-entrada__label">Entradas</span>
         <h2 className="rc-entrada__title">
