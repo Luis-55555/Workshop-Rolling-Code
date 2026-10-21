@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./entrada.css";
+import "./ticket.css";
 
 type Ticket = {
   id: string;
@@ -80,7 +80,7 @@ function useCountdown(target: Date) {
   };
 }
 
-export default function Entrada() {
+export default function Ticket() {
   const { dias, horas, min } = useCountdown(DEADLINE);
 
   const timer = [
