@@ -18,7 +18,8 @@
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: center;
   gap: var(--rc-card-gap, 24px);
-  width: min(100%, var(--rc-container, 1200px));
+  width: 100%;
+  max-width: calc(var(--rc-container, 1200px) + var(--rc-gutter, 24px) * 2);
   margin-inline: auto;
   padding-inline: var(--rc-gutter, 24px);
 }

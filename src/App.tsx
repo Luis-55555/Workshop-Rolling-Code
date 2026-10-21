@@ -1,4 +1,4 @@
-import './App.css'
+import EventStats from './components/EventStats/EventStats';
 import HowToGetThere from './components/HowToGetThere/HowToGetThere'
 import Events from './components/events/events';
 
@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-    <Events/>
+      <EventStats/>
+      <Events/>
       <HowToGetThere />
-            <Footer />
-</>
-    
+      <Footer />
+    </>
   );
 }
 

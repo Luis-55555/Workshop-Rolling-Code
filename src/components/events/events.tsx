@@ -1,4 +1,4 @@
- import "./Events.css";
+ import "./events.css";
 
 type AgendaItem = {
   time: string;

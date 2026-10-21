@@ -9,13 +9,15 @@ const stats = [
 
 function EventStats() {
   return (
-    <section className="event-stats" aria-label="Datos destacados del evento">
-      {stats.map((stat) => (
-        <div className="event-stats__item" key={stat.label}>
-          <strong className="event-stats__value">{stat.value}</strong>
-          <span className="event-stats__label">{stat.label}</span>
-        </div>
-      ))}
+    <section className='eventContainer'>
+      <section className="event-stats" aria-label="Datos destacados del evento">
+        {stats.map((stat) => (
+          <div className="event-stats__item" key={stat.label}>
+            <strong className="event-stats__value">{stat.value}</strong>
+            <span className="event-stats__label">{stat.label}</span>
+          </div>
+        ))}
+      </section>
     </section>
   )
 }

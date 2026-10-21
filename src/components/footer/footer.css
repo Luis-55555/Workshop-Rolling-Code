@@ -23,8 +23,7 @@
 
 .rc-footer__logo img {
   display: block;
-  width: 82px;
-  max-height: 40px;
+  width: 140px;
   object-fit: contain;
 }
 
@@ -73,7 +72,7 @@
   }
 
   .rc-footer__logo img {
-    width: 66px;
+    width: 120px;
   }
 
   .rc-footer__socials {

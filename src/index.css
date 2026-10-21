@@ -16,6 +16,12 @@
   --rc-font: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--rc-black);
