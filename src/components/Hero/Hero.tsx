@@ -56,7 +56,7 @@ return (
  <div className="row g-4 align-items-center">
 <div className="col-lg-7">
 <p className="hero__label">
-<span className="hero__label-light"> Workshop </span> Entradas
+<span className="hero__label-light">Workshop</span> Entradas
  limitadas
 </p>
 
@@ -74,7 +74,7 @@ return (
 
 <div className="d-flex flex-wrap gap-3">
 <a href="#checkout" className="btn hero__btn hero__btn--dark">Comprar entrada</a>
-<a href="#agenda" className="btn hero__btn hero__btn--outline"> Ver agenda</a>
+<a href="#agenda" className="btn hero__btn hero__btn--outline">Ver agenda</a>
 </div>
 </div>
 <div className="col-lg-5">
@@ -83,7 +83,7 @@ return (
 <CalendarIcon />
     <div>
     <p className="hero__row-title hero__row-title--date">JUE 19/11</p>
-    <p className="hero__time"> 18.00 hs</p>
+    <p className="hero__time">18.00 hs</p>
 </div>
 </div>
 <div className="hero__row">
