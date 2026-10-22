@@ -13,6 +13,8 @@
 | HU-007 | Compra de entradas: selección de entrada (paso 1) | 8 | - | Pendiente |
 | HU-008 | Sección Cómo llegar | 3 | - | Pendiente |
 | HU-009 | Footer con redes sociales | 1 | - | Pendiente |
+| HU-010 | Sección de sponsors por niveles | 5 | - | Pendiente |
+| HU-011 | Formulario de postulación de sponsors | 5 | - | Pendiente |
 
 ---
 
@@ -244,6 +246,69 @@
 
 ---
 
+### HU-010: Sección de sponsors por niveles
+
+**Puntos:** 5
+
+**Como** visitante del sitio del evento
+**Quiero** ver las empresas que patrocinan el evento, organizadas por nivel de patrocinio y con una breve descripción de cada una
+**Para** conocer qué organizaciones respaldan el evento y qué oportunidades (becas, vouchers, empleo) ofrecen a la comunidad
+
+**Criterios de aceptación**
+
+- [ ] **Dado** que llego a la sección de sponsors, **cuando** carga el contenido, **entonces** veo los patrocinadores agrupados en tres niveles: Main Partners (Tier Diamante), Gold Tier (Nivel Oro) y Bronze Tier (Nivel Bronce).
+- [ ] **Dado** que veo un nivel, **cuando** observo su encabezado, **entonces** muestra un ícono, el nombre del nivel, una etiqueta con su categoría y una descripción breve de lo que representa.
+- [ ] **Dado** que veo el nivel Main Partners, **cuando** observo sus tarjetas, **entonces** se muestran tres tarjetas grandes (Google Cloud, Amazon Web Services y Mercado Libre) con logo, nombre, descripción, etiqueta de rol, categoría y un distintivo en el pie.
+- [ ] **Dado** que veo las tarjetas de Main Partners, **cuando** las comparo, **entonces** cada una tiene un borde de acento propio y se destacan visualmente por encima de los otros niveles.
+- [ ] **Dado** que veo el nivel Gold Tier, **cuando** observo sus tarjetas, **entonces** se muestran cinco tarjetas medianas (Microsoft, GitHub, Globant, Auth0 y Vercel) con logo, nombre, especialidad y una etiqueta.
+- [ ] **Dado** que veo el nivel Bronze Tier, **cuando** observo sus tarjetas, **entonces** se muestran siete tarjetas compactas (Supabase, DigitalOcean, Cloudflare, MongoDB, Docker, Stripe y Postman) con logo, nombre y especialidad.
+- [ ] **Dado** que los niveles se muestran en la página, **cuando** los recorro de arriba hacia abajo, **entonces** el tamaño y el protagonismo de las tarjetas disminuyen según el nivel (Diamante, Oro, Bronce).
+- [ ] **Dado** que las tarjetas de Main Partners incluyen un ícono de enlace, **cuando** hago clic en la tarjeta o en el ícono, **entonces** se abre el sitio del sponsor en una nueva pestaña.
+- [ ] **Dado** que paso el cursor sobre una tarjeta, **cuando** el cursor está encima, **entonces** se muestra un cambio visual que indica que es interactiva.
+- [ ] **Dado** que accedo desde un dispositivo móvil o pantalla pequeña, **cuando** llego a la sección, **entonces** las tarjetas se reacomodan en menos columnas (una o dos por fila) sin desplazamiento horizontal y los textos son legibles.
+
+**Notas:**
+- Falta definir en qué parte de la página va esta sección (por ejemplo, entre Agenda y Entradas) y si se agrega un enlace en el navbar (HU-001).
+- Faltan las URLs de los sponsors y definir si las tarjetas de Gold y Bronze también son enlaces.
+- Los textos de los distintivos de las tarjetas (por ejemplo, "100% Verified", "Global Leader", "Unicorn LATAM") deben ser confirmados con los sponsors; por su tono de verificación, conviene validarlos antes de publicar.
+- Los logos y nombres de marcas requieren autorización o confirmación de uso por parte de cada sponsor.
+- Los datos de los sponsors deben poder actualizarse fácilmente (agregar, quitar o cambiar de nivel).
+
+---
+
+### HU-011: Formulario de postulación de sponsors
+
+**Puntos:** 5
+
+**Como** representante de una empresa interesada en patrocinar el evento
+**Quiero** completar un formulario con los datos de mi empresa y el nivel de sponsoreo que busco
+**Para** postularme como sponsor y que el equipo organizador se contacte conmigo
+
+**Criterios de aceptación**
+
+- [ ] **Dado** que llego a la sección de postulación, **cuando** carga el contenido, **entonces** veo el título "Sumate como Sponsor" y el texto: "Conectá tu marca con más de 120 talentos IT, programadores junior, semi-seniors y líderes tecnológicos del norte argentino. Completá el formulario y nos contactaremos en menos de 24 horas hábiles."
+- [ ] **Dado** que veo el formulario, **cuando** observo los campos, **entonces** aparecen Nombre, Apellido, Empresa y Email corporativo (obligatorios), Tipo de sponsor (obligatorio), Logo de la empresa y Mensaje opcional.
+- [ ] **Dado** que veo los campos obligatorios, **cuando** los observo, **entonces** están marcados con un asterisco y cada campo muestra un texto de ejemplo (placeholder).
+- [ ] **Dado** que abro el selector de Tipo de sponsor, **cuando** despliego las opciones, **entonces** puedo elegir entre los niveles de sponsoreo (Diamante, Oro y Bronce), coherentes con los de la sección de sponsors (HU-010).
+- [ ] **Dado** que quiero adjuntar mi logo, **cuando** hago clic en el área de carga o arrastro un archivo hasta ella, **entonces** el archivo queda adjunto y se muestra su nombre.
+- [ ] **Dado** que adjunto un archivo, **cuando** su formato no es PNG, SVG, JPG o WEBP, o pesa más de 5 MB, **entonces** se rechaza y se muestra un mensaje que explica el motivo.
+- [ ] **Dado** que intento enviar el formulario, **cuando** falta algún campo obligatorio, **entonces** no se envía y se indica qué campos deben completarse.
+- [ ] **Dado** que ingreso un email, **cuando** no tiene un formato válido, **entonces** se muestra un mensaje de error en ese campo.
+- [ ] **Dado** que completo todos los campos obligatorios de forma válida, **cuando** hago clic en "Enviar postulación de Sponsor", **entonces** la postulación se envía y veo un mensaje de confirmación de que nos contactaremos en menos de 24 horas hábiles.
+- [ ] **Dado** que la postulación se envía correctamente, **cuando** aparece la confirmación, **entonces** el formulario se limpia para evitar envíos duplicados.
+- [ ] **Dado** que el envío falla, **cuando** ocurre el error, **entonces** veo un mensaje que lo informa y conservo los datos que había ingresado.
+- [ ] **Dado** que el formulario se está enviando, **cuando** hago clic en el botón, **entonces** el botón se deshabilita hasta recibir la respuesta.
+- [ ] **Dado** que accedo desde un dispositivo móvil o pantalla pequeña, **cuando** llego al formulario, **entonces** los campos que están en dos columnas pasan a una sola y el formulario se completa sin desplazamiento horizontal.
+
+**Notas:**
+- Falta definir a dónde llegan las postulaciones (email del equipo, base de datos o servicio externo) y dónde se almacenan los logos adjuntos.
+- Falta definir en qué parte de la página va esta sección (por ejemplo, a continuación de HU-010) y si se enlaza desde el navbar (HU-001).
+- Las opciones del selector se asumieron a partir de los tres niveles de HU-010; confirmar si existe otra opción (por ejemplo, "Otro").
+- Se recomienda validar el email también en el servidor y limitar los envíos repetidos para evitar spam.
+- La promesa de respuesta en menos de 24 horas hábiles es un compromiso del equipo organizador: confirmar que puede cumplirse.
+
+---
+
 ## Resumen de puntos
 
 | ID | Historia | Puntos |
@@ -257,23 +322,25 @@
 | HU-007 | Compra de entradas: selección de entrada (paso 1) | 8 |
 | HU-008 | Sección Cómo llegar | 3 |
 | HU-009 | Footer con redes sociales | 1 |
-| | **Total** | **35** |
+| HU-010 | Sección de sponsors por niveles | 5 |
+| HU-011 | Formulario de postulación de sponsors | 5 |
+| | **Total** | **45** |
 
 ---
 
 ## Sugerencia de reparto entre 3 desarrolladores
 
-Promedio ideal: ~11,7 puntos por desarrollador.
+Promedio ideal: 15 puntos por desarrollador.
 
 | Desarrollador | Historias | Puntos | Enfoque |
 |---------------|-----------|--------|---------|
-| **Dev 1 – Eduardo** | HU-007 (8) + HU-001 (3) + HU-009 (1) | **12** | Flujo de compra y estructura global (navbar y footer) |
+| **Dev 1 – Eduardo** | HU-007 (8) + HU-001 (3) + HU-009 (1) + HU-011 (5) | **17** | Flujo de compra, estructura global (navbar y footer) y formulario de sponsors |
 | **Dev 2 – Luciana** | HU-002 (5) + HU-006 (5) + HU-003 (2) | **12** | Parte superior de la landing y venta de entradas |
-| **Dev 3 – Luis** | HU-004 (5) + HU-005 (3) + HU-008 (3) | **11** | Contenido informativo del evento (speakers, agenda y ubicación) |
+| **Dev 3 – Luis** | HU-004 (5) + HU-005 (3) + HU-008 (3) + HU-010 (5) | **16** | Contenido informativo del evento (speakers, agenda, ubicación y sponsors) |
 
 **Criterios del reparto**
 
-- **Carga equilibrada:** 12 / 12 / 11 puntos.
+- **Carga:** 17 / 12 / 16 puntos. Luciana queda con margen para apoyar a Eduardo o Luis si se complican sus historias.
 - **Afinidad entre historias:** cada desarrollador toma secciones relacionadas, lo que reduce el cambio de contexto y favorece componentes y estilos coherentes.
 - **Historia más grande separada:** HU-007 (8 puntos) la asume Eduardo (Dev 1), con historias pequeñas que lo equilibran.
 
