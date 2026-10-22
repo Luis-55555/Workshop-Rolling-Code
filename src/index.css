@@ -10,10 +10,13 @@
   --rc-text-soft: #d4d4d8;
   --rc-text-mute: #a1a1aa;
   --rc-gradient: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+  --bs-body-bg: var(--rc-black);
+  --bs-body-color:var(--rc-white);
+  --bs-body-font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-:root {
-  --rc-font: 'Plus Jakarta Sans', system-ui, sans-serif;
+.container {
+  max-width: 1200px;
 }
 
 *,
@@ -26,7 +29,7 @@ body {
   margin: 0;
   background: var(--rc-black);
   color: var(--rc-white);
-  font-family: var(--rc-font);
+  font-family: var(--bs-body-font-family);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.55;
