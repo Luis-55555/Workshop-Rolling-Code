@@ -15,7 +15,7 @@
 }
 
 .rc-navbar__logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -90,7 +90,7 @@
   }
 
   .rc-navbar__logo img {
-    height: 32px;
+    height: 60px;
   }
 
   
