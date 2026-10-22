@@ -4,17 +4,18 @@ import HowToGetThere from './components/HowToGetThere/HowToGetThere'
 import Events from './components/events/events';
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import {  } from 'lucide-react';
+import Hero from './components/Hero/Hero';
 
 
 function App() {
 
   return (
     <>
-       <Navbar />
+      <Navbar />
+      <Hero />
       <EventStats/>
       <Events/>
-    <Ticket />
+      <Ticket />
       <HowToGetThere />
       <Footer />
     </>
@@ -22,5 +23,3 @@ function App() {
 }
 
 export default App;
-
-
