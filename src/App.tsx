@@ -18,9 +18,7 @@ function App() {
       <HowToGetThere />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
-
-
+export default App
