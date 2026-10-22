@@ -4,6 +4,7 @@ import HowToGetThere from './components/HowToGetThere/HowToGetThere'
 import Events from './components/events/events';
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
+import Sponsor from "./components/sponsor/sponsor";
 import Hero from './components/Hero/Hero';
 
 
@@ -16,6 +17,7 @@ function App() {
       <EventStats/>
       <Events/>
       <Ticket />
+      <Sponsor />
       <HowToGetThere />
       <Footer />
     </>
