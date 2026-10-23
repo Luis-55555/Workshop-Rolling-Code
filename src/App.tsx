@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import Sponsor from "./components/sponsor/sponsor";
 import Hero from './components/Hero/Hero';
+import TicketSection from './components/TicketSection/TicketSection';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <EventStats/>
       <Events/>
       <Ticket />
+      <TicketSection />
       <Sponsor />
       <HowToGetThere />
       <Footer />
