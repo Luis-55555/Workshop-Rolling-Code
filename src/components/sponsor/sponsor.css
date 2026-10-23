@@ -1,0 +1,233 @@
+.rc-sponsor {
+  padding: 96px 0;
+}
+
+.rc-sponsor .rc-container {
+  max-width: 820px;
+}
+
+.rc-sponsor__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rc-sponsor__title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+}
+
+.rc-sponsor__lead {
+  font-size: 18px;
+  color: var(--rc-text-mute);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+
+.rc-sponsor__form {
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+  background: var(--rc-surface);
+  border: 1px solid var(--rc-border);
+  border-radius: 32px;
+}
+
+.rc-sponsor__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.rc-sponsor__field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.rc-sponsor__field label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--rc-text-soft);
+}
+
+.rc-sponsor__field label span {
+  color: var(--rc-red);
+}
+
+.rc-sponsor__field input,
+.rc-sponsor__field select,
+.rc-sponsor__field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--rc-border);
+  background: var(--rc-black);
+  color: var(--rc-white);
+  font: 400 14px "Plus Jakarta Sans", system-ui, sans-serif;
+  transition: border-color 0.2s;
+}
+
+.rc-sponsor__field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.rc-sponsor__field input::placeholder,
+.rc-sponsor__field textarea::placeholder {
+  color: var(--rc-text-mute);
+}
+
+.rc-sponsor__field input:focus,
+.rc-sponsor__field select:focus,
+.rc-sponsor__field textarea:focus {
+  outline: none;
+  border-color: var(--rc-red);
+}
+
+
+.rc-sponsor__select {
+  position: relative;
+}
+
+.rc-sponsor__select select {
+  appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.rc-sponsor__select svg {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--rc-text-mute);
+  pointer-events: none;
+}
+
+
+.rc-sponsor__drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 2px dashed var(--rc-border);
+  border-radius: 18px;
+  background: var(--rc-black);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.rc-sponsor__drop:hover,
+.rc-sponsor__drop:focus-visible,
+.rc-sponsor__drop.is-dragging {
+  outline: none;
+  border-color: var(--rc-red);
+  background: var(--rc-surface);
+}
+
+.rc-sponsor__drop-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--rc-surface-2);
+  color: var(--rc-text-soft);
+}
+
+.rc-sponsor__drop strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.rc-sponsor__drop small {
+  font-size: 12px;
+  color: var(--rc-text-mute);
+}
+
+.rc-sponsor__file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.rc-sponsor__file button {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--rc-surface-2);
+  color: var(--rc-white);
+  cursor: pointer;
+}
+
+.rc-sponsor__error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--rc-red);
+}
+
+
+.rc-sponsor__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--rc-red);
+  color: var(--rc-white);
+  font: 800 16px "Plus Jakarta Sans", system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rc-sponsor__submit:hover {
+  background: var(--rc-red-dark);
+}
+
+.rc-sponsor__success {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--rc-surface-2);
+  font-size: 14px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .rc-sponsor {
+    padding: 64px 0;
+  }
+  .rc-sponsor__title {
+    font-size: 36px;
+  }
+  .rc-sponsor__lead {
+    font-size: 16px;
+  }
+  .rc-sponsor__form {
+    padding: 20px;
+    border-radius: 24px;
+  }
+  .rc-sponsor__row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
