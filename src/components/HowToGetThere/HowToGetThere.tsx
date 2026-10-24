@@ -41,7 +41,7 @@ const bingMapsUrl =
             >
               Abrir en Bing Maps
             </a>  
-            <a className="boton boton--secundario" href="#comprar-entrada">
+            <a className="boton boton--secundario" href="#checkout">
               Comprar entrada
             </a>
           </div>

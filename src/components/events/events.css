@@ -1,6 +1,6 @@
 .events {
   width: 100%;
-  padding-block: var(--rc-section-gap, 96px);
+  padding-block: calc(var(--rc-section-gap, 96px) / 2);
   background: var(--rc-black, #0b0b0c);
   color: var(--rc-white, #fff);
   font-family: var(--rc-font, system-ui, sans-serif);
@@ -111,7 +111,7 @@
 }
 @media (max-width: 640px) {
   .events {
-    padding-block: 56px;
+    padding-block: 32px;
   }
 
   .events__layout {

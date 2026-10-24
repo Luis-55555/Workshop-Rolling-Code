@@ -12,6 +12,11 @@ type Ticket = {
   highlighted?: boolean;
 };
 
+const buyTicket = (id: string) => {
+  window.dispatchEvent(new CustomEvent("select-ticket", { detail: id }));
+  document.getElementById("checkout")?.scrollIntoView({ behavior: "smooth" });
+};
+
 const tickets: Ticket[] = [
   {
     id: "early",
@@ -156,7 +161,11 @@ export default function Ticket() {
                 ))}
               </ul>
 
-              <button className="rc-entrada__btn" type="button">
+              <button
+                className="rc-entrada__btn"
+                type="button"
+                onClick={() => buyTicket(t.id)}
+              >
                 Comprar entrada
               </button>
             </article>

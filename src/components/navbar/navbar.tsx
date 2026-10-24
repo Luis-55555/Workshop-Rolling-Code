@@ -50,7 +50,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="#tickets" className="rc-navbar__cta" onClick={close}>
+          <a href="#checkout" className="rc-navbar__cta" onClick={close}>
             Comprar entrada
           </a>
         </nav>
