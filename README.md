@@ -172,15 +172,6 @@ This project lasted **1 Sprint**.
 | Eduardo Romano | DEV | [@Eduromanoquiroga-Diseño](https://github.com/Eduromanoquiroga-Diseño) |
 | Luciana Melissa Villca | DEV | [@lucianamelissavillca-sys](https://github.com/lucianamelissavillca-sys) |
 
-**Product Owner:** Franco Andrés Díaz · **Tech Leads:** Franco Andrés Díaz
-
-## Deliverables
-
-- [ ] Link to the live page (GitHub Pages)
-- [ ] Link to the repository, with commits from every team member
-- [ ] Screenshot of the board with all backlog stories in "Hecho"
-- [ ] Retrospective (3 sentences)
-
----
+**Scrum Master:** Franco Andrés Díaz · **Tech Leads:** Franco Andrés Díaz
 
 Rolling Code School · Scrum Professional Bootcamp · Landing Workshop Project
