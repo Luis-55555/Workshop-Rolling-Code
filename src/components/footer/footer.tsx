@@ -1,4 +1,5 @@
 import "./footer.css";
+import logo from "../../assets/Logo/rclogo-dark-bad41e62.png";
 import {
   Instagram,
   Facebook,
@@ -24,12 +25,12 @@ export default function Footer() {
     <footer className="rc-footer">
       <div className="rc-footer__inner rc-container">
         <a
-          href=""
+          href="/"
           className="rc-footer__logo"
           aria-label="Rolling Code, inicio"
         >
           <img
-            src="src/assets/Logo/rclogo-dark-bad41e62.png"
+            src={logo}
             alt="Rolling Code School"
           />
         </a>
